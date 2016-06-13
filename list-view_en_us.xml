@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="meta-warning-title">We found more car deals for you!</entry>
+    <entry key="meta-warning-content">The car rental you selected is no longer available, so we found the next best offers.</entry>
+    <entry key="page-title">Car Rentals</entry>
+    <entry key="interstitial-message">Finding available cars for your trip</entry>
+    <entry key="cached-result-message">Finding available cars for your trip...Partial results are pre-loaded</entry>
+    <entry key="mip-text-title">Exclusive Offer</entry>
+    <entry key="mip-flight-text-subtitle">Because you booked a flight, you qualify for exclusive car deals.</entry>
+    <entry key="mip-hotel-text-subtitle">Because you booked a hotel, you qualify for exclusive car deals.</entry>
+    <entry key="mip-flight_and_hotel-text-subtitle">Because you booked with {{brandName}}, you qualify for exclusive car deals.</entry>
+    <entry key="urgency-message">{{urgencyCount}} people have shopped for cars at {{region}} airport on {{brandName}} in the last 24 hours.</entry>
+    <entry key="close_urgency_message">Close message</entry>
+    <entry key="close_demand_message">Close message</entry>
+    <entry key="reward-member-banner3">Welcome, {{userName}}. Because you're an {{expediaPlusBranded}} member, you save 10% or more on select car rentals.</entry>
+    <entry key="reward-member-banner-num-deal">Welcome, {{userName}}. Because you're an {{expediaPlusBranded}} member, you qualify for {{noOfMemberDeals}} exclusive offers.</entry>
+    <entry key="combined-flight-banner">Because you booked a flight as an {{expediaPlusBranded}} member, you qualify for exclusive car deals.</entry>
+    <entry key="combined-hotel-banner">Because you booked a hotel as an {{expediaPlusBranded}} member, you qualify for exclusive car deals.</entry>
+    <entry key="combined-flight_and_hotel-banner">Because you booked as an {{expediaPlusBranded}} member, you qualify for exclusive car deals.</entry>
+    <entry key="user-reward-banner">Welcome {{userName}}, you qualify for incredible deals on rental cars.</entry>
+    <entry key="mip-flight-skinny-banner">Exclusive offer. Because you booked a flight, you qualify for exclusive car deals.</entry>
+    <entry key="mip-hotel-skinny-banner">Exclusive offer. Because you booked a hotel, you qualify for exclusive car deals.</entry>
+    <entry key="mip-flight_and_hotel-skinny-banner">Exclusive offer. Because you booked with {{brandName}}, you qualify for exclusive car deals.</entry>
+    <entry key="supplier-name">${supplierName} logo</entry>
+    <entry key="new-window-announcement">Opens in a new window.</entry>
+    <entry key="close-message">close</entry>
+    <entry key="48hrs-booking-urgency-message">{{urgencyCount}} people have booked cars at {{region}} airport on {{brandName}} in the last 48 hours.</entry>    
+    <entry key="or-similar-make-model-message">The makes/models shown are examples only. We are unable to guarantee a specific make/model. Actual makes/models are subject to availability and vary by rental car company.</entry>
+    <entry key="insurance-priming-message1">Remember to get collision damage protection at checkout.</entry>
+    <entry key="insurance-priming-message2">Don't forget to add collision damage protection at checkout.</entry>
+</properties>
+

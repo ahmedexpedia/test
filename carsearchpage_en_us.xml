@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>views.default.pages.cars.carsearchpage</comment>
+<entry key="button-next">Next</entry>
+<entry key="button-previous">Prev</entry>
+<entry key="button-see-more">See More Cars</entry>
+<entry key="car-search-radius">Radius</entry>
+<entry key="cm-module-title1">Because you booked a flight, you qualify for exclusive car deals!</entry>
+<entry key="filter-air-conditioning">Air Conditioning</entry>
+<entry key="filter-automatic-transmission">Automatic Transmission</entry>
+<entry key="filter-label">Filter by:</entry>
+<entry key="filter-unlimited-mileage">Unlimited Mileage</entry>
+<entry key="interstitial-msg">Updating your results</entry>
+<entry key="interstitial-msg-searching-car">Finding available cars for your trip</entry>
+<entry key="interstitial-msg-dropoff">Finding the closest drop-off locations</entry>
+<entry key="page-title">Car rentals</entry>
+<entry key="radius-1">1 ${units.unitName}</entry>
+<entry key="radius-10">10 ${units.unitNamePlural}</entry>
+<entry key="radius-2">2 ${units.unitNamePlural}</entry>
+<entry key="radius-25">25 ${units.unitNamePlural}</entry>
+<entry key="radius-5">5 ${units.unitNamePlural}</entry>
+<entry key="radius-menu-close">Close</entry>
+<entry key="toggle-view">List view</entry>
+<entry key="toggle-view2">Grid view</entry>
+<entry key="toggle-view-screen-reader">Click to switch to</entry>
+<entry key="NightsTexts">['one night','nights']</entry>
+<entry key="see-more-car-types-msg">See more car types</entry>
+<entry key="search-results-text">Search Results</entry>
+<entry key="view-map-link">View map</entry>
+<entry key="CAR_SEARCH_INTERSTITIAL_COMPLETE">Results updated.</entry>
+<entry key="timeout-msg-with-urgency">Still looking for a car? Reserve a deal before prices change. &lt;a href="javascript:void(null);" class="close-refresh-modal"&gt;Continue Searching&lt;/a&gt;</entry>
+<entry key="timeout-msg-with-urgency-flexshopping">&lt;a href="javascript:void(null);" class="close-refresh-modal"&gt;Refresh your search &lt;/a&gt;to get latest prices and availability</entry>
+</properties>
+

@@ -1,0 +1,6 @@
+{{#if shouldShowPopularAirportMessage}}
+    {{page-alerts demand-info="POPULAR_AIRPORT_MESSAGE"}}
+
+    <!--Fly message at the bottom of the page-->
+	{{!demand-message id='demand-message' regions=regions}}
+{{/if}}

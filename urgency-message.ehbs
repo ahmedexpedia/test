@@ -1,0 +1,10 @@
+{{#if showUrgencyMessage}}
+    <div id='regionUrgencyMessageContainer' class="{{if makeNonTransparent 'highOpacity'}} {{if visuallyHidden 'visuallyhidden'}}" {{action "closeMessage" on="click"}}>
+        <button type="button" class="btn-close btn-primary {{if visuallyHidden 'hidden'}}">
+            <span class="icon icon-close" aria-hidden="true"></span>
+            <span class="alt">{{loc 'views_default_pages_cars_search_list-view.close_urgency_message'}}</span>
+        </button>
+        <div>{{urgencyMessage}}</div>
+    </div>
+{{/if}}
+

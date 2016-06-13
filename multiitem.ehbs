@@ -1,0 +1,162 @@
+{{playback-container action="search"  
+    regions=model.regions 
+    pickUpRegionName=model.regions.pickup.name 
+    dropOffRegionName=model.regions.dropOff.name 
+    pickUpDate=model.params.pickUpDate 
+    dropOffDate=model.params.dropOffDate 
+    pickUpTime=model.params.pickUpTime 
+    dropOffTime=model.params.dropOffTime 
+    showAds=showAds
+    allowOpen=false
+}}
+
+<div id="main-results" class="site-content-wrap">
+
+    {{#if showCarUpdateInterstitial}}
+        {{cars-update-interstitial}}
+    {{/if}}
+
+	<div class="site-content cols-row cf">
+
+        {{#if isPriceChanged}}
+            {{price-change priceChange=model.packagePriceChange packageType=model.params.packageType}}
+        {{/if}}
+
+        {{page-alerts messages=model.messages warnings=model.warnings}}
+
+        {{#if model.multiItemDetails}}
+            {{multi-item-playback multiItemDetails=model.multiItemDetails}}
+        {{/if}}
+
+        {{cars-title
+            id='cars-title'
+            regions=model.regions
+            lowestPrice=filteredOfferStats.lowestIncrementalPricedOffer.fare.incrementalPrice.formattedValue
+            offerCount=filteredOffers.length
+            searchResultUpdated=searchResultUpdated
+            pricePeriod=searchDetails.pricePeriod
+        }}
+
+        {{multiitem-saving-message maxSavingsOffer=maxSavingsOffer packageType=packageType}}
+
+        {{popular-airport-message regions=model.regions popularAirportUrgencyCount=model.popularAirportUrgencyCount}}
+
+        <div class="perk-left">
+            {{included-fees-message id="included-fees-message" regions=model.regions params=model.params}}
+        </div>
+
+        <div class="clear-both"></div>
+
+        {{#if showFilterPills}}
+            {{filter-pills
+                selectedFilterOptions=filterPillOptions
+                filterPillDeleted="filterApplied"}}
+        {{/if}}
+
+        <aside id="filter-panel" class="col" role="complementary">            
+		
+			{{filter-panel-close toggleButton="#filter-toggle-btn"}}
+                   
+            {{filters-section
+               displayFilters=filterListDisplay
+               filterAppliedAction="filterApplied"
+            }}
+            <div id="IntentMediaRail"></div>
+        </aside>
+
+        <section class="col" role="main">
+            {{#if showCarousel}}
+                {{filter-carousel
+                   carTypeFilter=headerFilterList
+                   filterAppliedAction="filterApplied"
+                   pricePeriod=searchDetails.pricePeriod
+                   reInitializeCarousel=reInitializeCarousel
+                }}
+            {{/if}}
+
+             {{sort-bar
+                sortingAppliedAction="sortingApplied"
+                availableSortOptions=availableSortOptions
+                selectedSortOption=selectedSortOption
+             }}
+
+            {{offer-cards id='search-results'
+              offers=displayOffers
+              searchDetails=searchDetails
+              regions=model.regions
+              pageNumber=pageNumber
+            }}
+
+            {{#if isShowMoreButton}}
+                {{show-more id='show-more' class='pagination'
+                    offerCount=filteredOffers.length
+                    displayOfferCount=displayOfferCount
+                    offersPerPage=offersPerPage
+                    showMoreClicked="showMoreClicked"
+                }}
+            {{else}}
+                {{cars-pagination id='pagination'
+                    offerCount=filteredOffers.length
+                    offersPerPage=offersPerPage
+                    pageChanged="pageChanged"
+                    selectedSortOption=selectedSortOption
+                }}
+            {{/if}}
+
+            <div class="or-similar-make-model-message">
+                {{loc 'views_default_pages_cars_search_list-view.or_similar_make_model_message'}}
+            </div>
+        </section>
+        
+        {{!-- TODO: move this into a component --}}
+		{{#if showAds}}
+            <div id="ads-column-container">
+                {{#if showThinDColAds}}
+                    <div id="D-ColAds" class="D_column_ads D_column_thin_ads large_ad">
+                        {{ad "DCOL3" width=160 height=600}}
+                        {{resource "adsense.containers:Dcol" }}
+                        {{ad "DCOL4" width=160 height=600}}
+                    </div>
+                {{else}}
+                    <div id="D-ColAds" class="D_column_ads large_ad">
+                        {{ad "DCOL3" width=300 height=250}}
+                        {{resource "adsense.containers:Dcol" }}
+                        {{ad "DCOL4" width=300 height=250}}
+                    </div>
+                {{/if}}
+           </div>
+       {{/if}}
+	</div>
+</div>
+
+{{!-- TODO: move this into a component --}}
+{{#if showAds}}
+    <div role="bottomAd" id="bottom-Ad" class="site-content  cols-row">
+        <div id="medium-banner-ad" class="col banner_ad_container medium_ad">
+            <div class="banner_ad_content">
+                 {{ad "CENTERMIDDLE1" width=728 height=90}}
+            </div>
+        </div>
+        <div id="small-banner-ad" class="col banner_ad_container small_ad">
+            <div class="banner_ad_content">
+                {{ad "CENTERMIDDLE2" width=468 height=60}}
+            </div>
+        </div>
+        <div id="mobile-bottom-ad" class="banner_ad_container bottomMobileAd mobile_ad">
+            <div class="banner_ad_content">
+                {{ad "CENTERMIDDLE3" width=300 height=250}}
+            </div>
+        </div>
+    
+        <div class="col adsense_footer large_ad">
+            {{resource "adsense.containers:largeFooter" }}
+        </div>
+        <div class="col adsense_footer medium_ad">
+            {{resource "adsense.containers:mediumFooter" }}
+        </div>
+        <div class="col adsense_footer small_ad">
+            {{resource "adsense.containers:smallFooter" }}
+        </div>
+    
+    </div>
+{{/if}}
